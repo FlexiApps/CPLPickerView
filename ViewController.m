@@ -13,12 +13,20 @@
 
 static NSString * const customViewCell = @"customViewCell";
 
-@interface ViewController () <TestViewControllerDelegate>
+@interface ViewController () <PickerViewControllerDelegate>
 @property (nonatomic, strong) NSArray *customViewArray;
 @property (nonatomic, strong) CustomViewModel *customViewModel;
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
-@property (nonatomic, strong) TestViewController *controller;
+@property (nonatomic, strong) PickerViewController *controller;
 
+@property (nonatomic, strong) NSArray *staticPickerData;
+@property (nonatomic, strong) NSArray *editablePickerData;
+@property (nonatomic, strong) NSArray *staticImagesData;
+@property (nonatomic, assign) NSInteger textLengthAllowance;
+@property (nonatomic, strong) NSIndexPath *indexPath;
+@property (nonatomic, strong) NSString *pickerTitle;
+@property (nonatomic, assign) int row;
+@property (nonatomic, assign) int section;
 @end
 
 
@@ -29,34 +37,42 @@ static NSString * const customViewCell = @"customViewCell";
     // Do any additional setup after loading the view, typically from a nib.
     
     self.edgesForExtendedLayout = UIRectEdgeNone;
-    NSArray *staticPickerData = @[NSLocalizedString(@"home", nil), NSLocalizedString(@"office", nil), NSLocalizedString(@"country_house", nil)];
-    NSArray *editablePickerData = @[NSLocalizedString(@"custom", nil)];
-    NSInteger staticItemIndex = 1;
-    NSInteger editableItemIndex = -1;
-
-    self.controller = [[TestViewController alloc] initWithStaticItems:staticPickerData editableItems:editablePickerData staticItemIndex:staticItemIndex editableItemIndex:editableItemIndex];
+    
+    //Initial Data
+    self.staticPickerData = @[NSLocalizedString(@"Home", nil), NSLocalizedString(@"Office", nil), NSLocalizedString(@"Country House", nil), NSLocalizedString(@"Garaz", nil)];
+    self.editablePickerData = @[NSLocalizedString(@"Add Custom Label", nil)];
+    self.textLengthAllowance = 5;
+    self.indexPath = nil;
+    self.pickerTitle = NSLocalizedString(@"Choose", nil);
 }
 
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    
+    //- Update picker values
+    self.controller = [[PickerViewController alloc] initWithStaticItems:self.staticPickerData editableItems:self.editablePickerData  staticImageItems:self.staticImagesData pickerRow:self.row pickerSection:self.section];
+}
 
 #pragma mark - TestViewControllerDelegate Methods
-- (void)didCancelWithTestViewController:(TestViewController *)testViewController {
+- (void)didCancelWithPickerViewController:(PickerViewController *)pickerViewController {
     [self.navigationController popViewControllerAnimated:YES];
 }
 
-- (void)didSelectItemWithSelectedStaticItemIndex:(NSInteger)selectedStaticItemIndex {
-    NSLog(@"%ld",(long)selectedStaticItemIndex);
+- (void)pickerViewControllerWithPickerViewController:(PickerViewController *)pickerViewController didSelectRow:(NSInteger)row inSection:(NSInteger)section :(NSString *)customText {
     [self.navigationController popViewControllerAnimated:YES];
+    self.indexPath = [NSIndexPath indexPathForRow:row inSection:section];
+    
+    self.row = (int)row;
+    self.section = (int)section;
+    
+    if (customText == nil || [customText isEqualToString:@""]) {
+        self.editablePickerData = @[@""];
+    }
+    else {
+        self.editablePickerData = @[customText];
+    }
 }
 
-- (void)didSelectEditableItemWithSelectedEditableItemIndex:(NSInteger)selectedEditableItemIndex customEditableItem:(NSString *)customEditableItem {
-    NSLog(@"%ld - %@",(long)selectedEditableItemIndex, customEditableItem);
-    [self.navigationController popViewControllerAnimated:YES];
-}
-
-- (void)didSelectNothingWithTestViewController:(TestViewController *)testViewController {
-    NSLog(@"NOTHING");
-    [self.navigationController popViewControllerAnimated:YES];
-}
 
 #pragma Getters - settingsArray
 - (NSArray *)customViewArray
@@ -64,11 +80,10 @@ static NSString * const customViewCell = @"customViewCell";
     if (_customViewArray == nil) {
         _customViewArray = @[
                              @[
-                                 [[CustomViewModel alloc] initWithName:@"Name" withCustomLabel:YES],
-                                 [[CustomViewModel alloc] initWithName:@"Nothing" withCustomLabel:YES],
+                                 [[CustomViewModel alloc] initWithName:@"Local" withCustomLabel:YES],
                                  ],
                              @[
-                                 [[CustomViewModel alloc] initWithName:@"Other" withCustomLabel:YES],
+                                 [[CustomViewModel alloc] initWithName:@"Framework" withCustomLabel:YES],
                                  ]
                              ];
     }
@@ -130,32 +145,26 @@ static NSString * const customViewCell = @"customViewCell";
                     [self.navigationController pushViewController:self.controller animated:YES];
                 }
                     break;
-                case 1:
-                {
-                    self.controller.delegate = self;
-                    [self.navigationController pushViewController:self.controller animated:YES];
-                }
-                    break;
                 default:
                     break;
             }
             
             break;
         }
-        case 1:
-        {
-            switch (indexPath.row) {
-                case 0:
-                {
-                    self.controller.delegate = self;
-                    [self.navigationController pushViewController:self.controller animated:YES];
-                }
-                    break;
-                default:
-                    break;
-            }
-            break;
-        }
+//        case 1:
+//        {
+//            switch (indexPath.row) {
+//                case 0:
+//                {
+//                    GoToPickerViewController *controller = [self.storyboard instantiateViewControllerWithIdentifier:@"GoToPickerViewController"];
+//                    [self.navigationController pushViewController:controller animated:YES];
+//                }
+//                    break;
+//                default:
+//                    break;
+//            }
+//            break;
+//        }
             
         default:
             break;
