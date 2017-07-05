@@ -175,7 +175,7 @@ static NSString * const customViewCell = @"customViewCell";
                     self.controller.pickerTitle = self.pickerTitle;
                     self.controller.textLengthAllowanceInt = self.textLengthAllowance;
                     self.controller.selectedIndexPath = self.indexPath;
-                    self.controller.colorForBackgroundView = [UIColor greenColor];
+                    self.controller.colorForBackgroundView = [UIColor purpleColor];
                     self.controller.colorForCustomCell = [UIColor whiteColor];
                     self.controller.colorForSeparatorLine = [UIColor lightGrayColor];
                     self.controller.colorForTextFieldWarning = [UIColor orangeColor];
@@ -189,20 +189,6 @@ static NSString * const customViewCell = @"customViewCell";
             
             break;
         }
-//        case 1:
-//        {
-//            switch (indexPath.row) {
-//                case 0:
-//                {
-//                    GoToPickerViewController *controller = [self.storyboard instantiateViewControllerWithIdentifier:@"GoToPickerViewController"];
-//                    [self.navigationController pushViewController:controller animated:YES];
-//                }
-//                    break;
-//                default:
-//                    break;
-//            }
-//            break;
-//        }
             
         default:
             break;
