@@ -39,11 +39,7 @@ static NSString * const customViewCell = @"customViewCell";
     self.edgesForExtendedLayout = UIRectEdgeNone;
     
     //Initial Data
-    self.staticPickerData = @[NSLocalizedString(@"Home", nil), NSLocalizedString(@"Office", nil), NSLocalizedString(@"Country House", nil), NSLocalizedString(@"Garaz", nil)];
-    self.editablePickerData = @[NSLocalizedString(@"Add Custom Label", nil)];
-    self.textLengthAllowance = 5;
-    self.indexPath = nil;
-    self.pickerTitle = NSLocalizedString(@"Choose", nil);
+    [self initNamePicker];
 }
 
 - (void)viewWillAppear:(BOOL)animated {
@@ -51,6 +47,38 @@ static NSString * const customViewCell = @"customViewCell";
     
     //- Update picker values
     self.controller = [[PickerViewController alloc] initWithStaticItems:self.staticPickerData editableItems:self.editablePickerData  staticImageItems:self.staticImagesData pickerRow:self.row pickerSection:self.section];
+}
+
+- (void)initNamePicker {
+    self.staticPickerData =  @[NSLocalizedString(@"home", nil), NSLocalizedString(@"office", nil), NSLocalizedString(@"country_house", nil), NSLocalizedString(@"Garaz", nil), NSLocalizedString(@"island", nil)];
+    
+    self.textLengthAllowance = 40;
+    self.pickerTitle = NSLocalizedString(@"choose", nil);
+    
+    //- Set initial values
+    if ([self.staticPickerData containsObject:self.customViewModel.name]) {
+        //- location name found in the staticPickerData
+        //- empty editablePickerData to just present the placeholder
+        //- set the row from the staticPickerData array
+        //- set the section to zero (first section)
+        //- create an indexpath from row & section
+        self.editablePickerData = @[@""];
+        self.row = (int)[self.staticPickerData indexOfObject:self.customViewModel.name];
+        self.section = 0;
+        self.indexPath = [NSIndexPath indexPathForRow:self.row inSection:self.section];
+    }
+    else if (self.customViewModel.name && ![self.staticPickerData containsObject:self.customViewModel.name]) {
+        self.editablePickerData = @[self.customViewModel.name];
+        self.row = 0;
+        self.section = 1;
+        self.indexPath = [NSIndexPath indexPathForRow:self.row inSection:self.section];
+    }
+    else {
+        self.editablePickerData = @[@""];
+        self.row = -1;
+        self.section = -1;
+        self.indexPath = nil;
+    }
 }
 
 #pragma mark - TestViewControllerDelegate Methods
@@ -67,9 +95,11 @@ static NSString * const customViewCell = @"customViewCell";
     
     if (customText == nil || [customText isEqualToString:@""]) {
         self.editablePickerData = @[@""];
+        self.customViewModel.name = self.staticPickerData[self.indexPath.row];
     }
     else {
         self.editablePickerData = @[customText];
+        self.customViewModel.name = customText;
     }
 }
 
@@ -119,9 +149,9 @@ static NSString * const customViewCell = @"customViewCell";
     cell.textLabel.textColor = [UIColor blackColor];
     cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
     
-    CustomViewModel *customViewModel = self.customViewArray[indexPath.section][indexPath.row];
+    self.customViewModel = self.customViewArray[indexPath.section][indexPath.row];
     
-    cell.textLabel.text = customViewModel.name;
+    cell.textLabel.text = self.customViewModel.name;
     
     cell.preservesSuperviewLayoutMargins = FALSE;
     cell.separatorInset = UIEdgeInsetsZero;
@@ -142,6 +172,14 @@ static NSString * const customViewCell = @"customViewCell";
                 case 0:
                 {
                     self.controller.delegate = self;
+                    self.controller.pickerTitle = self.pickerTitle;
+                    self.controller.textLengthAllowanceInt = self.textLengthAllowance;
+                    self.controller.selectedIndexPath = self.indexPath;
+                    self.controller.colorForBackgroundView = [UIColor greenColor];
+                    self.controller.colorForCustomCell = [UIColor whiteColor];
+                    self.controller.colorForSeparatorLine = [UIColor lightGrayColor];
+                    self.controller.colorForTextFieldWarning = [UIColor orangeColor];
+                    self.controller.fontForCustomCell = [UIFont fontWithName:@"HelveticaNeue-light" size:20.0];
                     [self.navigationController pushViewController:self.controller animated:YES];
                 }
                     break;
