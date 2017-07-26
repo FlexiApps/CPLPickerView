@@ -1,0 +1,11 @@
+use_frameworks!
+
+target 'CPLPickerView_Example' do
+  pod 'CPLPickerView', :path => '../'
+
+  target 'CPLPickerView_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end

@@ -1,0 +1,27 @@
+{
+  "name": "CPLPickerView",
+  "version": "0.1.0",
+  "summary": "A Custom picker list.",
+  "description": "TODO: Add long description of the pod here.",
+  "homepage": "http://gitlab.zulutrade.local/KYON/iOS/CPLPickerView",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "christos christodoulou": "cchristodoulou@kyontracker.com"
+  },
+  "source": {
+    "git": "http://gitlab.zulutrade.local/KYON/iOS/CPLPickerView.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "9.0"
+  },
+  "source_files": "CPLPickerView/Classes/**/*",
+  "resource_bundles": {
+    "CPLPickerView": [
+      "CPLPickerView/Assets/**/*.xib"
+    ]
+  }
+}

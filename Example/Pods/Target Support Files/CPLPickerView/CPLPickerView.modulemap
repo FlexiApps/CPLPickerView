@@ -1,0 +1,6 @@
+framework module CPLPickerView {
+  umbrella header "CPLPickerView-umbrella.h"
+
+  export *
+  module * { export * }
+}

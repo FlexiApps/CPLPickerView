@@ -1,0 +1,16 @@
+PODS:
+  - CPLPickerView (0.1.0)
+
+DEPENDENCIES:
+  - CPLPickerView (from `../`)
+
+EXTERNAL SOURCES:
+  CPLPickerView:
+    :path: ../
+
+SPEC CHECKSUMS:
+  CPLPickerView: 488e7f47952af2af9167c01c7ab85fb9b855040a
+
+PODFILE CHECKSUM: 0b61e093b04b13261777c5aefa3d576d4bdcd3c5
+
+COCOAPODS: 1.2.1
