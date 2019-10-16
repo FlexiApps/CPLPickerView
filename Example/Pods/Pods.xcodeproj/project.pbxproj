@@ -47,14 +47,14 @@
 		04922F725AC3E7EDB4B797895804875D /* Pods-CPLPickerView_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-CPLPickerView_Example.release.xcconfig"; sourceTree = "<group>"; };
 		0C0FD6CE99AF8E153019C9D5788394EA /* Pods-CPLPickerView_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-CPLPickerView_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		0ECD0FE5BA9A90EB850D365FDC40B413 /* ResourceBundle-CPLPickerView-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "ResourceBundle-CPLPickerView-Info.plist"; sourceTree = "<group>"; };
-		10294656E77E1FDBEDDCF00C7377231F /* Pods_CPLPickerView_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_CPLPickerView_Example.framework; path = "Pods-CPLPickerView_Example.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		10294656E77E1FDBEDDCF00C7377231F /* Pods_CPLPickerView_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CPLPickerView_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		190917C6995D2C2D036628119AAAE829 /* Pods-CPLPickerView_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-CPLPickerView_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
 		1979DD6C670BB7D0ED6CB25F4737507C /* CPLEditableTableViewCell.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = CPLEditableTableViewCell.swift; sourceTree = "<group>"; };
 		22C01F81B0C0491890A83A744D7FC63E /* Pods-CPLPickerView_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-CPLPickerView_Tests.debug.xcconfig"; sourceTree = "<group>"; };
-		38EBC5776871E72124A2EC2CA54DEC98 /* Pods_CPLPickerView_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_CPLPickerView_Tests.framework; path = "Pods-CPLPickerView_Tests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		38EBC5776871E72124A2EC2CA54DEC98 /* Pods_CPLPickerView_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CPLPickerView_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		473B4F12CF64FEF1F906BDE646F0B5A5 /* CPLEditableTableViewCell.xib */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.xib; path = CPLEditableTableViewCell.xib; sourceTree = "<group>"; };
 		496D25001A862B15CE7AA6A6CFF0111B /* CPLStaticTableViewCell.xib */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.xib; path = CPLStaticTableViewCell.xib; sourceTree = "<group>"; };
-		4B3711681367148FFA84A383C6D7ADA9 /* CPLPickerView.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = CPLPickerView.modulemap; sourceTree = "<group>"; };
+		4B3711681367148FFA84A383C6D7ADA9 /* CPLPickerView.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = CPLPickerView.modulemap; sourceTree = "<group>"; };
 		55576C2FFF41D446D3FE805439BAB700 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		641813D899DC8B7BBF27B6A2143F2D8D /* CPLPickerView.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = CPLPickerView.xcconfig; sourceTree = "<group>"; };
 		6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
@@ -67,14 +67,14 @@
 		8981AD9D90865D49F8ACC98C4FB100F6 /* CPLPickerView-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "CPLPickerView-umbrella.h"; sourceTree = "<group>"; };
 		8D500997E7DB11A1C7B78BD48B21410D /* Pods-CPLPickerView_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-CPLPickerView_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		91AA55336209FC18521740DF160027C5 /* Pods-CPLPickerView_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-CPLPickerView_Example-umbrella.h"; sourceTree = "<group>"; };
-		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		94A4880F3D6BCE01E50F9E3A50094395 /* Pods-CPLPickerView_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-CPLPickerView_Example.modulemap"; sourceTree = "<group>"; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		94A4880F3D6BCE01E50F9E3A50094395 /* Pods-CPLPickerView_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-CPLPickerView_Example.modulemap"; sourceTree = "<group>"; };
 		9788D4AAE10C00A470418F6472F2165C /* Pods-CPLPickerView_Tests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-CPLPickerView_Tests-resources.sh"; sourceTree = "<group>"; };
-		97E1956791A0A44FFB9D85FCAF3134AD /* CPLPickerView.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = CPLPickerView.bundle; path = CPLPickerView.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
+		97E1956791A0A44FFB9D85FCAF3134AD /* CPLPickerView.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CPLPickerView.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
 		98130535CFDF6E8B2A856A8470362266 /* CPLPickerView-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "CPLPickerView-dummy.m"; sourceTree = "<group>"; };
-		9F31CFA5BF9C22A2299F188F4A824B4A /* CPLPickerView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = CPLPickerView.framework; path = CPLPickerView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9F31CFA5BF9C22A2299F188F4A824B4A /* CPLPickerView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CPLPickerView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A3990C61F6E0626E06D43C5E568496D3 /* Pods-CPLPickerView_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-CPLPickerView_Example-dummy.m"; sourceTree = "<group>"; };
-		AB361475EF73399C541AA21D969B5539 /* Pods-CPLPickerView_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-CPLPickerView_Tests.modulemap"; sourceTree = "<group>"; };
+		AB361475EF73399C541AA21D969B5539 /* Pods-CPLPickerView_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-CPLPickerView_Tests.modulemap"; sourceTree = "<group>"; };
 		AECFFEB88E1B320649DEDE6999E8537A /* Pods-CPLPickerView_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-CPLPickerView_Tests-dummy.m"; sourceTree = "<group>"; };
 		D37855DFEC4EC98DAA4D61C2017DF72D /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D773C49A5B2C6B6C6176F6C145946A2D /* CPLPickerViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = CPLPickerViewController.swift; sourceTree = "<group>"; };
@@ -124,7 +124,6 @@
 			children = (
 				8D067504F188A5DF303230C2CE6D0CFF /* Classes */,
 			);
-			name = CPLPickerView;
 			path = CPLPickerView;
 			sourceTree = "<group>";
 		};
@@ -159,7 +158,6 @@
 				F18B8917F925A810533B390102200CC2 /* CPLPickerViewController.xib */,
 				496D25001A862B15CE7AA6A6CFF0111B /* CPLStaticTableViewCell.xib */,
 			);
-			name = Assets;
 			path = Assets;
 			sourceTree = "<group>";
 		};
@@ -218,7 +216,6 @@
 				D773C49A5B2C6B6C6176F6C145946A2D /* CPLPickerViewController.swift */,
 				E672E97324C8AB5CD836988A143DD0FC /* CPLStaticTableViewCell.swift */,
 			);
-			name = Classes;
 			path = Classes;
 			sourceTree = "<group>";
 		};
@@ -227,7 +224,6 @@
 			children = (
 				1A1DB986628A09FE92FB42987A9B60AF /* Assets */,
 			);
-			name = CPLPickerView;
 			path = CPLPickerView;
 			sourceTree = "<group>";
 		};
@@ -399,6 +395,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 			);
 			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
@@ -573,7 +570,7 @@
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
@@ -656,7 +653,7 @@
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
@@ -694,7 +691,7 @@
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
@@ -825,7 +822,7 @@
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";

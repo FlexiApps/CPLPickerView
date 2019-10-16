@@ -125,13 +125,13 @@ public class CPLPickerViewController: UIViewController {
     }
     
     //MARK: Bar Buttons Action
-    func cancelTapped() {
+    @objc func cancelTapped() {
         //dismiss keyboard
         view.endEditing(true)
         delegate?.didCancel(pickerViewController: self)
     }
     
-    func doneTapped() {
+    @objc func doneTapped() {
         if selectedIndexPath == nil{ return }
         //dismiss keyboard
         view.endEditing(true)
