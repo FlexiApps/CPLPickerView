@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'CPLPickerView'
-  s.version          = '0.2.3'
+  s.version          = '0.2.4'
   s.summary          = 'A Custom picker list.'
 
 # This description is used to generate tags and improve search results.
@@ -21,11 +21,11 @@ Pod::Spec.new do |s|
 TODO: Add long description of the pod here.
                        DESC
 
-  s.homepage         = 'http://gitlab.zulutrade.local/KYON/iOS/CPLPickerView'
+  s.homepage         = 'https://github.com/FlexiApps/CPLPickerView'
   # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'christos christodoulou' => 'cchristodoulou@kyontracker.com' }
-  s.source           = { :git => 'http://gitlab.zulutrade.local/KYON/iOS/CPLPickerView.git', :tag => s.version.to_s }
+  s.source           = { :git => 'https://github.com/FlexiApps/CPLPickerView.git', :tag => s.version.to_s }
 
   s.ios.deployment_target = '9.0'
 
